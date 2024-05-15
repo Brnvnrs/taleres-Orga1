@@ -1,0 +1,40 @@
+cargo 0100 en force input
+en_force_input 1
+reg0_w 1
+clock
+reg0_w 0
+
+cargo 0000 en force input
+reg1_w 1
+clock
+reg1_w 0
+en_force_input 0
+
+op = 11
+
+ALU_A_W = 1
+registro0 en_out = 1
+clock
+ALU_A_W = 0
+registro0 en_out = 0
+
+ALU_B_W = 1
+registro1 en_out = 1
+clock
+ALU_B_W = 0
+registro1 en_out = 0
+
+clock
+
+reg4_output=1
+reg2_w = 1
+clock
+reg2_w=0
+reg4_output=0
+
+op = 01
+clock
+reg4_output=1
+reg3_w = 1
+clock
+
